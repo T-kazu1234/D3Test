@@ -13,7 +13,8 @@ function render() {
     var dotLines = dots[dotIndex];
     var dot = dotLines.join('');
     graphviz
-        .addImage("https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", "400px", "300px")
+        .addImage("https://scrapbox.io/api/pages/Tanakake-memo/がんばるぞい/icon", "400px", "300px")
+    	.addImage("https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", "400px", "300px")
     	.addImage("https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", "400px", "300px")
         .renderDot(dot)
         .on("end", function () {
@@ -23,16 +24,71 @@ function render() {
 }
 
 var dots = [
+     [  'digraph{' ,
+ /*       '	subgraph cluster_0 {',
+		'   style=filled',
+        '   color=lightgrey',
+        '   node [style=filled,color=white]',
+        '   a0 -> a1 -> a2 -> a3',
+        'label = "process #1"',
+      '   }',
+*/
+//      '    subgraph cluster_1 {',
+        '       node [style=filled]',
+        '    b3 [labelloc=b,fontsize = 18,image="https://scrapbox.io/api/pages/Tanakake-memo/がんばるぞい/icon", label=" 友希あいね", shape=plaintext,href="https://scrapbox.io/pages/T-kazu-Note/ごろごろ～"]',
+        '    b0 -> b1 -> b2 -> b3',
+        '    label = "process #2"',
+        '    color=blue',
+//      '    }',
+        '    start -> a0',
+        '    start -> b0',
+        ' a1 -> b3',
+        ' b2 -> a3',
+        ' a3 -> a0',
+        ' a3 -> end',
+        ' b3 -> end',
+        ' start [shape=Mdiamond]',
+        '  end [shape=Msquare]',
+        '}',
+    ]
+,
+     ['digraph{',
+ /*       '	subgraph cluster_0 {',
+		'   style=filled',
+        '   color=lightgrey',
+        '   node [style=filled,color=white]',
+        '   a0 -> a1 -> a2 -> a3',
+        'label = "process #1"',
+      '   }',
+*/
+//      '    subgraph cluster_1 {',
+        '       node [style=filled]',
+        '    b3 [labelloc=b,fontsize = 18,image="https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", label=" 友希あいね", shape=plaintext,href="https://scrapbox.io/pages/T-kazu-Note/ごろごろ～"]',
+        '    b0 -> b1 -> b2 -> b3 -> b0',
+        '    label = "process #2"',
+        '    color=blue',
+//      '    }',
+        '    start -> a0',
+        '    start -> b0',
+        ' a1 -> b3',
+        ' b2 -> a3',
+        ' a3 -> a0',
+        ' a3 -> end',
+        ' b3 -> end',
+        ' start [shape=Mdiamond]',
+        '  end [shape=Msquare]',
+        '}',
+     ]
+/*,
     [
         'digraph  {',
         '    node [style="filled"]',
-        '    a [labelloc=b,fontsize = 18,image="https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", label=" 友希あいね", shape=plaintext,href="https://dic.pixiv.net/a/%E5%8F%8B%E5%B8%8C%E3%81%82%E3%81%84%E3%81%AD"]',
-//      '    a [fillcolor="#d62728"]',
+        '    a [labelloc=b,fontsize = 18,image="https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", label=" 友希あいね", shape=plaintext,href="https://scrapbox.io/pages/T-kazu-Note/ごろごろ～"]',
         '    b [fillcolor="#1f77b4"]',
         '    a -> b',
         '}'
     ],
-    [
+//*   [
         'digraph  {',
         '    node [style="filled"]',
         '    a [fillcolor="#d62728"]',
@@ -121,4 +177,5 @@ var dots = [
         '    b [fillcolor="#1f77b4"]',
         '}'
     ],
+*/
 ];
