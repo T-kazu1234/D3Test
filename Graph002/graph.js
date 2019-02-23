@@ -14,8 +14,8 @@ function render() {
     var dot = dotLines.join('');
     graphviz
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo/がんばるぞい/icon", "400px", "300px")
-    	.addImage("https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", "400px", "300px")
-    	.addImage("https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", "400px", "300px")
+    	.addImage("https://scrapbox.io/api/pages/Tanakake-memo/ScrapBox/icon", "400px", "300px")
+    	.addImage("https://scrapbox.io/api/pages/Tanakake-memo/ごろごろ～/icon", "400px", "300px")
         .renderDot(dot)
         .on("end", function () {
             dotIndex = (dotIndex + 1) % dots.length;
@@ -24,7 +24,35 @@ function render() {
 }
 
 var dots = [
-     [  'digraph{' ,
+     [  'digraph{',
+ /*       '	subgraph cluster_0 {',
+		'   style=filled',
+        '   color=lightgrey',
+        '   node [style=filled,color=white]',
+        '   a0 -> a1 -> a2 -> a3',
+        'label = "process #1"',
+      '   }',
+*/
+//      '    subgraph cluster_1 {',
+        '       node [style=filled]',
+        '    b0 [labelloc=b,fontsize = 18,image="https://scrapbox.io/api/pages/Tanakake-memo/ScrapBox/icon", label=" ScrapBox", shape=plaintext,href="https://scrapbox.io/pages/T-kazu-Note/ごろごろ～"]',
+        '    b0 -> b1 -> b2 -> b3 -> b0',
+        '    label = "process #2"',
+        '    color=blue',
+//      '    }',
+        '    start -> a0',
+        '    start -> b0',
+        ' a1 -> b3',
+        ' b2 -> a3',
+        ' a3 -> a0',
+        ' a3 -> end',
+        ' b3 -> end',
+        ' start [shape=Mdiamond]',
+        '  end [shape=Msquare]',
+        '}',
+     ]
+         ,
+     ['digraph{',
  /*       '	subgraph cluster_0 {',
 		'   style=filled',
         '   color=lightgrey',
@@ -52,33 +80,6 @@ var dots = [
         '}',
     ]
 ,
-     ['digraph{',
- /*       '	subgraph cluster_0 {',
-		'   style=filled',
-        '   color=lightgrey',
-        '   node [style=filled,color=white]',
-        '   a0 -> a1 -> a2 -> a3',
-        'label = "process #1"',
-      '   }',
-*/
-//      '    subgraph cluster_1 {',
-        '       node [style=filled]',
-        '    b3 [labelloc=b,fontsize = 18,image="https://scrapbox.io/api/pages/T-kazu-Note/ごろごろ～/icon", label=" 友希あいね", shape=plaintext,href="https://scrapbox.io/pages/T-kazu-Note/ごろごろ～"]',
-        '    b0 -> b1 -> b2 -> b3 -> b0',
-        '    label = "process #2"',
-        '    color=blue',
-//      '    }',
-        '    start -> a0',
-        '    start -> b0',
-        ' a1 -> b3',
-        ' b2 -> a3',
-        ' a3 -> a0',
-        ' a3 -> end',
-        ' b3 -> end',
-        ' start [shape=Mdiamond]',
-        '  end [shape=Msquare]',
-        '}',
-     ]
 /*,
     [
         'digraph  {',
