@@ -64,50 +64,76 @@ var dots = [
 //グラフ001
 //下り通信**************************************************************************************
      ['digraph{',
-        'subgraph cluster_1 {',
-        '     node [style=filled];',
-        'label = "家の中"',
-        'S31[label="光コンセント",shape=plaintext]',
-        'S32[label="光モデム",shape=plaintext]',
-        'S31->S32 [dir = forward,label="受信"]',
-        'S32->S33 [dir = forward,label="受信"]',
-            'subgraph cluster_1_1 {',
-            'label="接続機器の通信管理"',
-            'S33[label = "{ルーター|{無線管理|{<WiFi_001>WiFi_001|<WiFi_002>WiFi_002 |<WiFi_003>WiFi_003} }}", shape = record]',
-            'S34[label = "iPhone", shape = record]',
-            'S35[label = "MacBook", shape = record]',
-            'S36[label = "RecBox", shape = record]',
-            'S33:WiFi_001->S34 [ailport = e, headport = w,dir = forward,label="",style=dotted]',
-            'S33:WiFi_002->S35 [ailport = e, headport = w,dir = forward,label="",style=dotted]',
-            'S33:WiFi_003->S36 [ailport = e, headport = w,dir = forward,label="",style=dotted]',
-            'rank = same; S34;',
-            'rank = same; S35;',
-            'rank = same; S36;',
-            '}',
-        '}',
-        'subgraph cluster_2 {',
-        '     node [style=filled];',
-        'label = "家の外"',
-        'S41[label="電柱",shape=plaintext]',
-        'S42[label="モバイル通信網\n(携帯基地局)",shape=plaintext]',
-        'S41->S31 [dir = forward,label="通信ケーブル\n(光ファイバー)"]',
-        'S42->S34:WiFi_002 [dir = forward,label="無線\n(LTE)",style=dotted]',
-/*ランク付けを試す
-   {rank = same; 1550; b1; b2; b3; b4;}
-   {rank = same; 1560; b5; b6; b7; b8;}
-   {rank = same; 1570; b9; b10; b14; b15; b16; b17; b18;}
-   {rank = same; 1580; b20; b21; b22; b23; b24; b25; b27; b28; b29;}
-   {rank = same; 1590; b30; b31; b32;}
-   {rank = same; 1600; b33;}
-*/
+            'subgraph cluster_1 {',
+                '     node [style=filled];',
+                'label = "ハードウェア"',
+                'hard01[label="iPhone",shape=plaintext]',
+                'hard02[label="MacBook",shape=plaintext]',
+                'hard03[label="デジカメ",shape=plaintext]',
+                'subgraph cluster_1_1_1 {',
+                    'node [style=filled];',
+                    'label = "記録媒体"',
+                    'hard_memory01[label="USBメモリ",shape=plaintext]',
+                    'hard_memory02[label="SDカード",shape=plaintext]',
+                    'subgraph cluster_1_2 {',
+                        'node [style=filled];',
+                        'label = "記録媒体の中にあるデータ"',
+                        'subgraph cluster_1_2_1 {',
+                            'node [style=filled];',
+                            'label = "ファイル"',
+                            'data01[label="写真ファイル",shape=plaintext]',
+                            'data02[label="音声ファイル",shape=plaintext]',
+                        '}',
+                        'subgraph cluster_1_2_2 {',
+                            'node [style=filled];',
+                            'label = "拡張子"',
+                            'kakucyoushi01[label="jpeg",shape=plaintext]',
+                            'kakucyoushi02[label="mp3",shape=plaintext]',
+                        '}',
 
-        '}',
+            '}',
+
+            '}',
+//              'S32->S33 [dir = forward,label="受信"]',
+            '}',
+            'subgraph cluster_2 {',
+                '     node [style=filled];',
+                'label = "ソフトウェア（プログラム）"',
+                'soft01[label="LINE",shape=plaintext]',
+                'soft02[label="Gmail",shape=plaintext]',
+                'soft03[label="写真ビューワツール",shape=plaintext]',
+//              'soft01S41->S31 [dir = forward,label="通信ケーブル\n(光ファイバー)"]',
+//              'soft01S42->S34:WiFi_002 [dir = forward,label="無線\n(LTE)",style=dotted]',
+            '}',
+            'subgraph cluster_5 {',
+                'node [style=filled];',
+                'label = "WEBサービス"',
+                'webService01[label="Line",shape=plaintext]',
+                'webService02[label="Gmail",shape=plaintext]',
+            '}',
+            'subgraph cluster_6 {',
+                'node [style=filled];',
+                'label = "企業"',
+                'Company01[label="Google",shape=plaintext]',
+                'Company02[label="LINE株式会社",shape=plaintext]',
+            '}',
+//ノード
+                'hard03->hard_memory02 [dir = forward,label="データ書込み"]',
+                'hard02->soft03 [dir = forward,label="データ書込み"]',
+                'hard_memory02->data01->kakucyoushi01 [dir = none,label=""]',
+
+                'kakucyoushi02->data02 [dir = none,label=""]',
+                'kakucyoushi01->soft03 [dir = none,label=""]',
+                'Company02->webService01->soft01->{hard01,hard02}[dir = none,label=""]',
+                'Company01->webService02->soft02[dir = none,label=""]',
+
+
         '}',
      ]
         ,
 //**************************************************************************************
 //グラフ002
-//上り通信**************************************************************************************
+/*上り通信**************************************************************************************
      ['digraph{',
         'subgraph cluster_1 {',
         '     node [style=filled];',
@@ -138,6 +164,7 @@ var dots = [
         '}',
         '}',
      ],
+*/
 //**************************************************************************************
 /*
 
