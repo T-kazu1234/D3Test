@@ -25,8 +25,8 @@ function render() {
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/マーゲイ/icon", "300px", "300px")//マーゲイ
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/例のポーズ/icon", "400px", "300px")//例のポーズ
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/かばんちゃん/icon", "300px", "300px")//かばんちゃん
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
+        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/さばんなちほー/icon", "400px", "300px")//アイコンページ名xx
+        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/PPP(ペパプ)/icon", "400px", "300px")//アイコンページ名xx
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
@@ -65,9 +65,27 @@ var dots = [
 //下り通信**************************************************************************************
      ['digraph{',
       '     node [style=filled];',
-        'Node_0001 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/マーゲイ/icon", label="マーゲイ", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/pages/Tanakake-memo/マーゲイ"]',
-        'Node_0002 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/例のポーズ/icon", label="例のポーズ", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/Tanakake-memo/%E3%81%95%E3%81%B0%E3%82%93%E3%81%AA%E3%81%A1%E3%81%BB%E3%83%BC"]',
-        'Node_0003 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/かばんちゃん/icon", label="かばんちゃん", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/Tanakake-memo-icons/%E3%81%8B%E3%81%B0%E3%82%93%E3%81%A1%E3%82%83%E3%82%93"]',
+        'Node_0001 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/マーゲイ/icon", label="マーゲイ", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/Tanakake-memo/マーゲイ"]',
+        'subgraph cluster_1 {',
+                'node [style=filled];',
+                'label = "さばんなちほー"',
+                'Node_0002 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/例のポーズ/icon", label="例のポーズ", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/Tanakake-memo/%E3%81%95%E3%81%B0%E3%82%93%E3%81%AA%E3%81%A1%E3%81%BB%E3%83%BC"]',
+                'Node_0003 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/かばんちゃん/icon", label="かばんちゃん", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/Tanakake-memo-icons/%E3%81%8B%E3%81%B0%E3%82%93%E3%81%A1%E3%82%83%E3%82%93"]',
+                'Node_0004 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/さばんなちほー/icon", label="さばんなちほー", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/Tanakake-memo-icons/%E3%81%8B%E3%81%B0%E3%82%93%E3%81%A1%E3%82%83%E3%82%93"]',
+
+            '}',
+        'subgraph cluster_2 {',
+                'node [style=filled];',
+                'label = "みずべちほー"',
+                'Node_0001 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/マーゲイ/icon", label="マーゲイ", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/pages/Tanakake-memo/マーゲイ"]',
+                'Node_0005 [labelloc=b,fontsize = 50,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/PPP(ペパプ)/icon", label="PPP(ペパプ)", labeldistance = 400, shape=plaintext,href="https://scrapbox.io/Tanakake-memo/PPP(ペパプ)"]',
+
+
+            '}',
+                    'Node_0004->Node_0002 [dir = none,label="",color = "red",style=dotted]',
+                    'Node_0004->Node_0003 [dir = none,label="",color = "red",style=dotted]',
+                    'Node_0001->Node_0005 [dir = none,label="マネージャー",color = "red",style=dotted]',
+                    
         '}',
      ]
         ,
