@@ -67,9 +67,9 @@ var dots = [
         '     node [style=filled];',
                 'Node_0001[label="N1_",shape=plaintext]',
 
-                'Node_0013[label="N13_Sprite",shape=plaintext]',
-                'Node_0014[label="N14_Group",shape=plaintext]',
-                'Node_0015[label="N15_Scene",shape=plaintext]',
+                'Node_0013[label="N13_",shape=plaintext]',
+                'Node_0014[label="N14_",shape=plaintext]',
+                'Node_0015[label="N15_",shape=plaintext]',
 
         'subgraph cluster_1 {',
             'label = "図解思考"',
@@ -90,7 +90,7 @@ var dots = [
                 'Node_0002[label="N2_主語",shape=plaintext]',
 
             '}',
-        'Node_0001->Node_0002->Node_0003->Node_0004 [dir = none,label="",color = "red"]',
+        'Node_0002->Node_0003->Node_0004 [dir = none,label="",color = "red"]',
         'Node_0005->Node_0006 [dir = none,label="",color = "red"]',
         'Node_0003->Node_0005 [dir = none,label="",color = "red"]',
 
