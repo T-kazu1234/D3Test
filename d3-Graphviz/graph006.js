@@ -67,12 +67,6 @@ var dots = [
         '     node [style=filled];',
                 'Node_0001[label="N1_",shape=plaintext]',
 
-                'Node_0007[label="N7",shape=plaintext]',
-                'Node_0008[label="N8_Graphviz",shape=plaintext]',
-                'Node_0009[label="N9_SprashScene",shape=plaintext]',
-                'Node_0010[label="N10_Game",shape=plaintext]',
-                'Node_0011[label="N11_Node",shape=plaintext]',
-                'Node_0012[label="N12_Entity",shape=plaintext]',
                 'Node_0013[label="N13_Sprite",shape=plaintext]',
                 'Node_0014[label="N14_Group",shape=plaintext]',
                 'Node_0015[label="N15_Scene",shape=plaintext]',
@@ -100,6 +94,28 @@ var dots = [
         'Node_0005->Node_0006 [dir = none,label="",color = "red"]',
         'Node_0003->Node_0005 [dir = none,label="",color = "red"]',
 
+        'subgraph cluster_4 {',
+           'label = "ツール"',
+                'Node_0008[label="N8_Graphviz",shape=plaintext]',
+
+            '}',
+        'subgraph cluster_5 {',
+           'label = "プログラミング"',
+                'Node_0007[label="N7_アルゴリズム",shape=plaintext]',
+                            'subgraph cluster_5_1 {',
+                            'label = "言語"',
+                            'Node_0009[label="N9_javascript",shape=plaintext]',
+                            '}',
+                                                        'subgraph cluster_5_2 {',
+                                                        'label = "Library"',
+                                                        'Node_0010[label="N10_Viz.js",shape=plaintext]',
+                                                        'Node_0011[label="N11_D3.js",shape=plaintext]',
+                                                        'Node_0012[label="N12_d3-graphviz.js",shape=plaintext]',
+                                                        '{rank = same; Node_0010;Node_0011;Node_0012;}',
+                                                        '}',
+
+
+            '}',
 
 
         '}',
