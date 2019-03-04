@@ -65,7 +65,7 @@ var dots = [
             'subgraph cluster_1 {',
                 '     node [style=filled];',
                 'label = "ハードウェア"',
-                'hard01[label="iPhone",shape=plaintext]',//ノード
+                'hard01[label="iPhone",shape=plaintext,shape=plaintext,color="",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/iPhone"]',//ノード
                 'hard02[label="MacBook",shape=plaintext,fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/MacBook"]',
                 'hard03[label="デジカメ",shape=plaintext,color=""]',
                 '{rank = same; hard01;hard02;hard03}',//ランク
@@ -118,6 +118,7 @@ var dots = [
                 'Company02[label="LINE株式会社",shape=plaintext,color=""]',
             '}',
 //ノード
+                'hard01->hard02 [dir = none,label="03",color="",href = "https://scrapbox.io/Tanakake-memo/iPhoneとMacBookの接続"]',
                 'hard03->hard_memory02 [dir = none,label="01"]',
                 'hard_memory02->hard02 [dir = none,label="02",color="",href = "https://scrapbox.io/Tanakake-memo/MacbookSDカードスロット"]',
 //              'hard02->soft03 [dir = forward,label="データ書込み"]',
@@ -139,7 +140,7 @@ var dots = [
             'subgraph cluster_1 {',
                 '     node [style=filled];',
                 'label = "ハードウェア"',
-                'hard01[label="iPhone",shape=plaintext]',//ノード
+                'hard01[label="iPhone",shape=plaintext,shape=plaintext,color="",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/iPhone"]',//ノード                
                 'hard02[label="MacBook",shape=plaintext,fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/MacBook"]',
                 'hard03[label="デジカメ",shape=plaintext,color="green"]',
                 '{rank = same; hard01;hard02;hard03}',//ランク
@@ -191,6 +192,7 @@ var dots = [
                 'Company02[label="LINE株式会社",shape=plaintext,color=""]',
             '}',
 //ノード
+                'hard01->hard02 [dir = none,label="03",color="",href = "https://scrapbox.io/Tanakake-memo/iPhoneとMacBookの接続"]',
                 'hard03->hard_memory02 [dir = none,label="01",color=""]',
                 'hard_memory02->hard02 [dir = none,label="02",color="",href = "https://scrapbox.io/Tanakake-memo/MacbookSDカードスロット"]',
 //              'hard02->soft03 [dir = forward,label="データ書込み"]',
@@ -212,7 +214,7 @@ var dots = [
             'subgraph cluster_1 {',
                 '     node [style=filled];',
                 'label = "ハードウェア"',
-                'hard01[label="iPhone",shape=plaintext]',//ノード
+                'hard01[label="iPhone",shape=plaintext,shape=plaintext,color="",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/iPhone"]',//ノード
                 'hard02[label="MacBook",shape=plaintext,fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/MacBook"]',
                 'hard03[label="デジカメ",shape=plaintext,color=""]',
                 '{rank = same; hard01;hard02;hard03}',//ランク
@@ -265,6 +267,7 @@ var dots = [
                 'Company02[label="LINE株式会社",shape=plaintext,color=""]',
             '}',
 //ノード
+                'hard01->hard02 [dir = none,label="03",color="",href = "https://scrapbox.io/Tanakake-memo/iPhoneとMacBookの接続"]',
                 'hard03->hard_memory02 [dir = forward,label="01",color="green"]',
                 'hard_memory02->hard02 [dir = none,label="02",color="",href = "https://scrapbox.io/Tanakake-memo/MacbookSDカードスロット"]',
 //              'hard02->soft03 [dir = forward,label="データ書込み"]',
@@ -282,7 +285,7 @@ var dots = [
             'subgraph cluster_1 {',
                 '     node [style=filled];',
                 'label = "ハードウェア"',
-                'hard01[label="iPhone",shape=plaintext]',//ノード
+                'hard01[label="iPhone",shape=plaintext,shape=plaintext,color="",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/iPhone"]',//ノード
                 'hard02[label="MacBook",shape=plaintext,shape=plaintext,color="green",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/MacBook"]',
                 'hard03[label="デジカメ",shape=plaintext,color=""]',
                 '{rank = same; hard01;hard02;hard03}',//ランク
@@ -335,8 +338,153 @@ var dots = [
                 'Company02[label="LINE株式会社",shape=plaintext,color=""]',
             '}',
 //ノード
+                'hard01->hard02 [dir = none,label="03",color="",href = "https://scrapbox.io/Tanakake-memo/iPhoneとMacBookの接続"]',
                 'hard03->hard_memory02 [dir = none,label="01",color=""]',
                 'hard_memory02->hard02 [dir = forward,label="02",color="green", href = "https://scrapbox.io/Tanakake-memo/MacbookSDカードスロット"]',
+
+//              'hard02->soft03 [dir = forward,label="データ書込み"]',
+//              'hard_memory02->data01->kakucyoushi01 [dir = none,label=""]',
+
+//              'kakucyoushi02->data02 [dir = none,label=""]',
+//              'kakucyoushi01->soft03 [dir = none,label=""]',
+                'Company02->webService01->soft01->{hard01,hard02}[dir = none,label=""]',
+                'Company01->webService02->soft02[dir = none,label=""]',
+        '}',
+             ]
+        ,
+//グラフ005
+             ['digraph{',
+            'subgraph cluster_1 {',
+                '     node [style=filled];',
+                'label = "ハードウェア"',
+                'hard01[label="iPhone",shape=plaintext,shape=plaintext,color="green",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/iPhone"]',//ノード
+                'hard02[label="MacBook",shape=plaintext,shape=plaintext,color="",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/MacBook"]',
+                'hard03[label="デジカメ",shape=plaintext,color=""]',
+                '{rank = same; hard01;hard02;hard03}',//ランク
+
+                'subgraph cluster_1_1_1 {',
+                    'node [style=filled];',
+                    'label = "記録媒体"',
+                    'hard_memory01[label="USBメモリ",shape=plaintext]',
+                    'hard_memory02[label="SDカード",shape=plaintext,color=""]',
+                           '{rank = same; hard_memory01;hard_memory02;}',
+
+                    'subgraph cluster_1_2 {',
+                        'node [style=filled];',
+                        'label = "データ"',
+                        'subgraph cluster_1_2_1 {',
+                            'node [style=filled];',
+                            'label = "ファイル"',
+                            'data01[label="写真ファイル",shape=plaintext,color="green"]',
+                            'data02[label="音声ファイル",shape=plaintext]',
+                           '}',
+                     'subgraph cluster_1_2_2 {',
+                            'node [style=filled];',
+                            'label = "拡張子"',
+                            'kakucyoushi01[label="jpeg",shape=plaintext,color="green"]',
+                            'kakucyoushi02[label="mp3",shape=plaintext]',
+                        '}',
+
+            '}',
+
+            '}',
+//              'S32->S33 [dir = forward,label="受信"]',
+            '}',
+            'subgraph cluster_2 {',
+                '     node [style=filled];',
+                'label = "ソフトウェア（プログラム）"',
+                'soft01[label="LINE",shape=plaintext]',
+                'soft02[label="Gmail",shape=plaintext]',
+                'soft03[label="写真ビューワツール",shape=plaintext]',
+            '}',
+            'subgraph cluster_5 {',
+                'node [style=filled];',
+                'label = "WEBサービス"',
+                'webService01[label="Line",shape=plaintext]',
+                'webService02[label="Gmail",shape=plaintext]',
+            '}',
+            'subgraph cluster_6 {',
+                'node [style=filled];',
+                'label = "企業"',
+                'Company01[label="Google",shape=plaintext]',
+                'Company02[label="LINE株式会社",shape=plaintext,color=""]',
+            '}',
+//ノード
+                'hard01->hard02 [dir = none,label="03",color="",href = "https://scrapbox.io/Tanakake-memo/iPhoneとMacBookの接続"]',
+                'hard03->hard_memory02 [dir = none,label="01",color=""]',
+                'hard_memory02->hard02 [dir = none,label="02",color="", href = "https://scrapbox.io/Tanakake-memo/MacbookSDカードスロット"]',
+
+//              'hard02->soft03 [dir = forward,label="データ書込み"]',
+//              'hard_memory02->data01->kakucyoushi01 [dir = none,label=""]',
+
+//              'kakucyoushi02->data02 [dir = none,label=""]',
+//              'kakucyoushi01->soft03 [dir = none,label=""]',
+                'Company02->webService01->soft01->{hard01,hard02}[dir = none,label=""]',
+                'Company01->webService02->soft02[dir = none,label=""]',
+        '}',
+             ]
+        ,
+//グラフ006
+             ['digraph{',
+            'subgraph cluster_1 {',
+                '     node [style=filled];',
+                'label = "ハードウェア"',
+                'hard01[label="iPhone",shape=plaintext,shape=plaintext,color="",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/iPhone"]',//ノード
+                'hard02[label="MacBook",shape=plaintext,shape=plaintext,color="green",fontcolor="blue",href = "https://scrapbox.io/Tanakake-memo/MacBook"]',
+                'hard03[label="デジカメ",shape=plaintext,color=""]',
+                '{rank = same; hard01;hard02;hard03}',//ランク
+
+                'subgraph cluster_1_1_1 {',
+                    'node [style=filled];',
+                    'label = "記録媒体"',
+                    'hard_memory01[label="USBメモリ",shape=plaintext]',
+                    'hard_memory02[label="SDカード",shape=plaintext,color=""]',
+                           '{rank = same; hard_memory01;hard_memory02;}',
+
+                    'subgraph cluster_1_2 {',
+                        'node [style=filled];',
+                        'label = "データ"',
+                        'subgraph cluster_1_2_1 {',
+                            'node [style=filled];',
+                            'label = "ファイル"',
+                            'data01[label="写真ファイル",shape=plaintext,color="green"]',
+                            'data02[label="音声ファイル",shape=plaintext]',
+                           '}',
+                     'subgraph cluster_1_2_2 {',
+                            'node [style=filled];',
+                            'label = "拡張子"',
+                            'kakucyoushi01[label="jpeg",shape=plaintext,color="green"]',
+                            'kakucyoushi02[label="mp3",shape=plaintext]',
+                        '}',
+
+            '}',
+
+            '}',
+//              'S32->S33 [dir = forward,label="受信"]',
+            '}',
+            'subgraph cluster_2 {',
+                '     node [style=filled];',
+                'label = "ソフトウェア（プログラム）"',
+                'soft01[label="LINE",shape=plaintext]',
+                'soft02[label="Gmail",shape=plaintext]',
+                'soft03[label="写真ビューワツール",shape=plaintext]',
+            '}',
+            'subgraph cluster_5 {',
+                'node [style=filled];',
+                'label = "WEBサービス"',
+                'webService01[label="Line",shape=plaintext]',
+                'webService02[label="Gmail",shape=plaintext]',
+            '}',
+            'subgraph cluster_6 {',
+                'node [style=filled];',
+                'label = "企業"',
+                'Company01[label="Google",shape=plaintext]',
+                'Company02[label="LINE株式会社",shape=plaintext,color=""]',
+            '}',
+//ノード
+                'hard01->hard02 [dir = foward,label="03",color="green",href = "https://scrapbox.io/Tanakake-memo/iPhoneとMacBookの接続"]',
+                'hard03->hard_memory02 [dir = none,label="01",color=""]',
+                'hard_memory02->hard02 [dir = none,label="02",color="", href = "https://scrapbox.io/Tanakake-memo/MacbookSDカードスロット"]',
 
 //              'hard02->soft03 [dir = forward,label="データ書込み"]',
 //              'hard_memory02->data01->kakucyoushi01 [dir = none,label=""]',
