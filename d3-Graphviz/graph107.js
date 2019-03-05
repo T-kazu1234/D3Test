@@ -1,5 +1,5 @@
 ﻿var dotIndex = 0;
-var graphviz = d3.select("#graph2").graphviz()
+var graphviz = d3.select("#graph1").graphviz()
     .transition(function () {
         return d3.transition("main")
             .ease(d3.easeLinear)
