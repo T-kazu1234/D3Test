@@ -24,8 +24,10 @@ function render() {
 }
 
 var dots = [
-
-     ['digraph{',    
+//**************************************************************************************
+//グラフ001
+//**************************************************************************************
+     ['digraph{',
 //      'rankdir = "LR";',
     'empty [label = "" shape = plaintext];',
     'node [shape = box,label="LINEトークルーム"];s0;',
@@ -36,9 +38,9 @@ var dots = [
     'empty -> s0 [label = "ボス！"];',
     's0 -> s1 [label = "Webhookイベントオブジェクト"];',
     's1 -> s2 [label = "text,LINE_replyToken"];',
-//    's1 -> s3 [label = "Debug_FunctionName,Debug_Value1,Debug_Value2,Debug_Value3,Debug_Value4,Debug_Value5,Debug_Value6,Debug_Value7,Debug_Value8,Debug_Value9"];',
     's1 -> s3 [label = "引数",href = "https://docs.google.com/spreadsheets/d/1Jby2feuurpzWmN2iePCO9nIqciyVwoOi2gC9HVNti64/edit#gid=527991011"];',
     's2 -> s0 [label = "return UrlFetchApp.fetch()"];',
+//    's1 -> s3 [label = "Debug_FunctionName,Debug_Value1,Debug_Value2,Debug_Value3,Debug_Value4,Debug_Value5,Debug_Value6,Debug_Value7,Debug_Value8,Debug_Value9"];',
 //    's3 -> s2 [label = "2/d"];',
 //    's3 -> e2 [label = "4"];',
 //    's2 -> e1 [label = "0"];',
