@@ -34,12 +34,20 @@ var dots = [
     'node [shape = box,label="function doPost(e)"];s1;',
     'node [shape = box,label="function reply()"];s2;',
     'node [shape = box,label="function Debug()"];s3;',
+    'node [shape = box,label="function Receive()"];s4;',
+    'node [shape = box,label="function send()"];s5;',
+    
 //    'node [shape = doublecircle]; e1 e2;',
     'empty -> s0 [label = "ボス！"];',
-    's0 -> s1 [label = "Webhookイベントオブジェクト"];',
-    's1 -> s2 [label = "text,LINE_replyToken"];',
-    's1 -> s3 [label = "引数",href = "https://docs.google.com/spreadsheets/d/1Jby2feuurpzWmN2iePCO9nIqciyVwoOi2gC9HVNti64/edit#gid=527991011"];',
+    's0 -> s1 [label = "Webhookイベントオブジェクト",fontcolor="blue",href = "https://developers.line.biz/ja/reference/messaging-api/#common-properties"];',
+    's5 -> s2 [label = "text,LINE_replyToken"];',
+//    's1 -> s3 [label = "引数",fontcolor="blue",href = "https://docs.google.com/spreadsheets/d/1Jby2feuurpzWmN2iePCO9nIqciyVwoOi2gC9HVNti64/edit#gid=527991011"];',
     's2 -> s0 [label = "return UrlFetchApp.fetch()"];',
+    's1 -> s4 [label = "引数"];',
+    's4 -> s5 [label = "引数"];',
+
+
+
 //    's1 -> s3 [label = "Debug_FunctionName,Debug_Value1,Debug_Value2,Debug_Value3,Debug_Value4,Debug_Value5,Debug_Value6,Debug_Value7,Debug_Value8,Debug_Value9"];',
 //    's3 -> s2 [label = "2/d"];',
 //    's3 -> e2 [label = "4"];',
@@ -126,4 +134,5 @@ var dots = [
         ,
 */
 
-];
+]
+//];//var dots ここまで
