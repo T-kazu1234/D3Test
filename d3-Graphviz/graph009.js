@@ -31,7 +31,7 @@ var dots = [
 //      'rankdir = "LR";',
     'empty [label = "" shape = plaintext];',
     'node [shape = box,label="LINEトークルーム"];s0;',
-    'node [shape = box,label="function doPost(e)"];s1;',
+    'node [shape = box,label="function doPost(e)",href = "https://t-kazu1234.github.io/D3Test/d3-Graphviz/Graphviz_0_ver10.html"];s1;',
     'node [shape = box,label="function reply()"];s2;',
     'node [shape = box,label="function Debug()"];s3;',
     'node [shape = box,label="function Receive()"];s4;',
