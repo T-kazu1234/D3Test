@@ -24,9 +24,7 @@ function render() {
 }
 
 var dots = [
-//**************************************************************************************
-//グラフ001
-//下り通信**************************************************************************************
+      //グラフ001
      ['digraph{',
         '     node [style=filled];',
                 'Node_0001[label="N01_頭の中の『気になっていること』全て",shape=plaintext]',
@@ -36,69 +34,19 @@ var dots = [
                 'Node_0005[label="N05_資料",shape=folder, style = "solid,filled",fontcolor="blue",color="black",fillcolor = "orange",href = "https://docs.google.com/spreadsheets/d/1MmKx5M1M3PdZTgt6Ol0oY1xCQkCVnM2TeFI0QoIOTgs/edit#gid=0"]',
                 'Node_0006[label="N06_\nいつかやる/\nたぶんやるリスト",shape=note,style = "solid,filled",color="black",fillcolor = "white"]',
                 'Node_0007[label="Q02",shape=Mdiamond]',
-                'Node_0008[label="N8_tanakake-memo",shape=plaintext]',
-                'Node_0009[label="N9_tanakake-memo",shape=plaintext]',
+                'Node_0008[label="N08_プロジェクトリスト",shape=note,style = "solid,filled",color="black",fillcolor = "white"]',
+                'Node_0009[label="N09_プロジェクトの参考情報",shape=folder, style = "solid,filled",fontcolor="blue",color="black",fillcolor = "orange",href = "https://docs.google.com/spreadsheets/d/1Jby2feuurpzWmN2iePCO9nIqciyVwoOi2gC9HVNti64/edit#gid=527991011"]',
                 'Node_0010[label="N10_tanakake-memo",shape=plaintext]',
-                'Node_0011[label="N11_プロジェクトの資料",shape=note, style = "solid,filled",fontcolor="blue",color="black",fillcolor = "white",href = "https://docs.google.com/spreadsheets/d/1Jby2feuurpzWmN2iePCO9nIqciyVwoOi2gC9HVNti64/edit#gid=527991011"]',
+                'Node_0011[label="N11_tanakake-memo",shape=note]',
 
-       'Node_0001->Node_0003->Node_0002 [dir = none,label="",color = "red"]',
-       'Node_0002->Node_0004 [dir = none,label="",color = "red",tailport = e, headport = w]',
-       'Node_0002->Node_0005 [dir = none,label="",color = "red",tailport = e, headport = w]',
-       'Node_0002->Node_0006 [dir = none,label="",color = "red",tailport = e, headport = w]',
-        ' {rank = same; Node_0004; Node_0005; Node_0006;}',
-/*
-        'subgraph cluster_1 {',
-            'label = "ScrapBox"',
-                'subgraph cluster_1_1 {',
-                    'label = "Project"',
-                'Node_0001[label="N1_tanakake-memo",shape=plaintext]',
-                '}',
-                'subgraph cluster_1_2 {',
-                    'label = "Settings"',
-                'Node_0002[label="N2_SettingsMenu01",shape=plaintext]',
-                '}',
-
-
-            '}',
-
-        'subgraph cluster_2 {',
-           'label = "GoogleAppScripts(GAS)"',
-           'href = "https://scrapbox.io/T-kazu-Note/Google_Apps_Script"',
-                'Node_0003[label="\nN3_LINEへの自動投稿テスト\n￣￣￣￣￣￣￣￣￣￣￣￣￣",shape=plaintext, fontcolor = blue, decolate = true, href = "https://script.google.com/d/136OgXNLSXagbTgPMUqopZa3ghFfw34f8d0wauR1QEsdAQ3NibMPLMwia/edit"]',
-                
-            '}',
-
-        'subgraph cluster_3 {',
-           'label = "LINE"',
-                'Node_0004[label="N4_",shape=plaintext]',
-                'subgraph cluster_3_1 {',
-                    'label = "LINE_Notify"',
-
-                'Node_0005[label="N5_チャットボット用アカウント",shape=plaintext]',
-                '}',
-                'subgraph cluster_3_2 {',
-                    'label = "talk_room"',
-                'Node_0006[label="N6_tanakafamily",shape=plaintext]',
-                'Node_0007[label="N7_ScrapBox通知",shape=plaintext]',
-
-                '}',
-
-            '}',
-
-
-
-                '{rank = same; Node_0004;Node_0006;}',
-
-        
-        'Node_0005->Node_0006 [dir = none,label="",color = "red"]',
-        'Node_0003->Node_0005 [dir = none,label="",color = "red"]',
-
-            '}',
-*/
-
-
+                       'Node_0001->Node_0003->Node_0002 [dir = none,label="",color = "red"]',
+                       'Node_0002->Node_0004 [dir = none,label="",color = "red",tailport = e, headport = w]',
+                       'Node_0002->Node_0005 [dir = none,label="",color = "red",tailport = e, headport = w]',
+                       'Node_0002->Node_0006 [dir = none,label="",color = "red",tailport = e, headport = w]',
+                       'Node_0002->Node_0007 [dir = none,label="",color = "red",tailport = s, headport = n]',
+                        ' {rank = same; Node_0004; Node_0005; Node_0006;}',
         '}',
-     ]
-        ,
+     ],
+
 
 ];
