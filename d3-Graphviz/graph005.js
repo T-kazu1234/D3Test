@@ -1,4 +1,4 @@
-﻿var dotIndex = 0;
+var dotIndex = 0;
 var graphviz = d3.select("#graph2").graphviz()
     .transition(function () {
         return d3.transition("main")
@@ -102,6 +102,11 @@ var dots = [
                 'Node_0601[label="ブック名～",shape=plaintext]',
                 'Node_0602[label="シート名",shape=plaintext]',
             '}',
+        'subgraph cluster_7 {',
+           'label = "SoundFile"',
+                'Node_0701[label="ぼくのフレンド.wav",shape=plaintext]',
+                'Node_0702[label="～.wav",shape=plaintext]',
+            '}',
 
         'Node_0102->Node_0104->Node_0105->Node_0106 [dir = back,label="",color = "red"]',
         'Node_0102->Node_0103->Node_0202 [dir = back,label="",color = "red"]',
@@ -111,8 +116,9 @@ var dots = [
         'Node_0501->Node_0502 [dir = back,label="doPost(e)",color = "red"]',
         'Node_0502->Node_0501 [dir = back,label="return",color = ""]',
         'Node_0108->Node_0502 [dir = back,label="result",color = ""]',
-        'Node_0501->Node_0601 [dir = back,label="コンテナバインド",color = ""]',
-        'Node_0601->Node_0501 [dir = back,label="コンテナバインド",color = "red"]',
+        'Node_0501->Node_0601 [dir = back,label="コンテナバインド",color = "blue"]',
+        'Node_0601->Node_0501 [dir = back,label="コンテナバインド",color = "blue"]',
+        'Node_0103->Node_0701 [dir = back,label="preload",color = "red"]',
 
         '}',
      ]
