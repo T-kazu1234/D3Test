@@ -14,18 +14,11 @@ function render() {
     var dot = dotLines.join('');
     //.addImage("画像として使用したいScrapBOXのアイコンページを指定"),"サイズ"
     graphviz
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/がんばるぞい/icon", "400px", "300px")//がんばるぞい
-    	.addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ScrapBox/icon", "300px", "300px")//Scrapbox
-    	.addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/アライさん/icon", "300px", "300px")//アライさん
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/HOME/icon", "300px", "300px")//HOME
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/Google/icon", "400px", "300px")//Google
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/Line/icon", "300px", "300px")//LINE
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/tanakafamily/icon", "300px", "300px")//アイコンページ名xx
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/GoogleAppsScript/icon", "300px", "300px")//アイコンページ名xx
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
-        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
+        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/Aterm_WG1200HS/icon", "400px", "300px")//アイコンページ名xx
+        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/MacBook/icon", "400px", "300px")//アイコンページ名xx
+        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ホームゲートウェイ/icon", "400px", "300px")//アイコンページ名xx
+        .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/光コンセント/icon", "400px", "300px")//アイコンページ名xx
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
         .addImage("https://scrapbox.io/api/pages/Tanakake-memo-icons/ごろごろ～/icon", "400px", "300px")//アイコンページ名xx
@@ -67,15 +60,16 @@ var dots = [
         'subgraph cluster_1 {',
         '     node [style=filled];',
         'label = "家の中"',
-        'S31[label="光コンセント",shape=plaintext]',
-        'S32[label="光モデム",shape=plaintext]',
+        'S31[label="光コンセント",shape=plaintext,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/光コンセント/icon"]',
+        'S32[label="光モデム",shape=plaintext,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/ホームゲートウェイ/icon"]',
         'S31->S32 [dir = forward,label="受信"]',
         'S32->S33 [dir = forward,label="受信"]',
             'subgraph cluster_1_1 {',
             'label="接続機器の通信管理"',
+            'S33image[label = "ルーター画像",image="https://scrapbox.io/api/pages/Tanakake-memo-icons/Aterm_WG1200HS/icon",shape=plaintext]',
             'S33[label = "{ルーター|{無線管理|{<WiFi_001>WiFi_001|<WiFi_002>WiFi_002 |<WiFi_003>WiFi_003} }}", shape = record]',
             'S34[label = "iPhone", shape = record]',
-            'S35[label = "MacBook", shape = record]',
+            'S35[label = "MacBook",image="https://scrapbox.io/api/pages/Tanakake-memo-icons/MacBook/icon",shape=plaintext]',
             'S36[label = "RecBox", shape = record]',
             'S33:WiFi_001->S34 [ailport = e, headport = w,dir = forward,label="",style=dotted]',
             'S33:WiFi_002->S35 [ailport = e, headport = w,dir = forward,label="",style=dotted]',
@@ -112,15 +106,16 @@ var dots = [
         'subgraph cluster_1 {',
         '     node [style=filled];',
         'label = "家の中"',
-        'S31[label="光コンセント",shape=plaintext]',
-        'S32[label="光モデム",shape=plaintext]',
+        'S31[label="光コンセント",shape=plaintext,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/光コンセント/icon"]',
+        'S32[label="光モデム",shape=plaintext,image="https://scrapbox.io/api/pages/Tanakake-memo-icons/ホームゲートウェイ/icon"]',
         'S31->S32 [dir = back,label="送信",color = "red"]',
         'S32->S33 [dir = back,label="送信",color = "red"]',
             'subgraph cluster_1_1 {',
             'label="接続機器の通信管理"',
+            'S33image[label = "ルーター画像",image="https://scrapbox.io/api/pages/Tanakake-memo-icons/Aterm_WG1200HS/icon",shape=plaintext]',
             'S33[label = "{ルーター|{無線管理|{<WiFi_001>WiFi_001|<WiFi_002>WiFi_002 |<WiFi_003>WiFi_003} }}", shape = record]',
             'S34[label = "iPhone", shape = record]',
-            'S35[label = "MacBook", shape = record]',
+            'S35[label = "MacBook",image="https://scrapbox.io/api/pages/Tanakake-memo-icons/MacBook/icon",shape=plaintext]',
             'S36[label = "RecBox", shape = record]',
             'S33:WiFi_001->S34 [ailport = e, headport = w,dir = back,label="",color = "red",style=dotted]',
             'S33:WiFi_002->S35 [ailport = e, headport = w,dir = back,label="",color = "red",style=dotted]',
