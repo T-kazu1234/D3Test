@@ -33,6 +33,8 @@ var dots = [
         'subgraph cluster_1 {',
             'label = "移行シート"',
                 'node [shape = planetext,fontcolor="",label="最初"];move1;',
+                'node [shape = planetext,fontcolor="",label="野草収集へ移動"];move2;',
+                
                              '}',
                             
         'subgraph cluster_2 {',
@@ -40,10 +42,18 @@ var dots = [
                 'node [shape = box3d,label="スタート"];main1;',
                 'node [shape = box3d,label="シーン1"];main2;',
                 'node [shape = box3d,label="ブランク"];main3;',
+                'node [shape = box3d,label="シーン４"];main4;',
                 'move1 -> main1 [label = "暗転あり"];',
                 'main1 -> main2 [label = "次"];',
                 'main1 -> main3 [label = "次次"];',
+                'main4 -> main [label = "次"];',
                             '}',
+
+        'subgraph cluster_3 {',
+            'label = "調べるシート"',
+                'node [shape = box3d,label="野草収集"];Search1;',
+                'move2 -> Search1',
+                            '}',                            
 
         '}',
      ]
